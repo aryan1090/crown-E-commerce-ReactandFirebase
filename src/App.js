@@ -53,10 +53,12 @@ class App extends React.Component {
         <Route exact path="/" component={Homepage}/>
         <Route path='/shop' component={ShopPage}/>
         <Route exact path='/signIn' render={()=>
-          this.props.currentUser? 
+          this.props.currentUser ? 
           <Redirect to='/'/>
           :
-          <SignInAndSignUp/>}/>
+          <SignInAndSignUp/>
+        }
+        />
         </Switch>
       </div>
     );
@@ -64,7 +66,7 @@ class App extends React.Component {
 }
 
 const mapStateToProps = ({user}) =>({
-  current: user.currentUser
+  currentUser: user.currentUser
 })
 
 const mapDispatchToProps = dispatch =>({
