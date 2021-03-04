@@ -57,7 +57,7 @@ class SignIn extends Component {
                     label={this.state.password?'':"Password"}
                     required/>
                     <div className="buttons">
-                    <CustomButton type="submit">
+                    <CustomButton inverted type="submit">
                         Sign In
                     </CustomButton>
                     <CustomButton onClick={signInWithGoogle} isGoogleSignIn>

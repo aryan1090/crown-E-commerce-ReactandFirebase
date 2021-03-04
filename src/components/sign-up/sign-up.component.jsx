@@ -94,7 +94,7 @@ class Signup extends React.Component{
                     label={this.state.displayName?'':'Display Name'}
                     required
                     />
-                    <CustomButton type="submit">Sign Up</CustomButton>
+                    <CustomButton inverted type="submit">Sign Up</CustomButton>
                 </form>
             </div>
         )

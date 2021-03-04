@@ -8,15 +8,18 @@ import {addItem} from '../../redux/cart/cart.actions';
 
 const CollectionItem = ({item,addItem}) => {
     return (
+        
         <div className="collection-item">
-            <div className="image" style={{backgroundImage:`url(${item.imageUrl})`}}>
-
+            <div className="img-container">
+                <div className="image" style={{backgroundImage:`url(${item.imageUrl})`}}>
+                </div>
             </div>
+        
             <div className="collection-footer">
                 <span className="name">{item.name}</span>
                 <span className="price">{item.price}</span>
             </div>
-            <CustomButton inverted onClick={()=> addItem(item)}>Add to Cart</CustomButton>
+            <CustomButton onClick={()=> addItem(item)}>Add to Cart</CustomButton>
         </div>
     )
 }
